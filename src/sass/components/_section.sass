@@ -1,0 +1,116 @@
+$on-padding: 40px
+
+.section
+  $this: &
+  position: relative
+  padding: 80px 0
+
+  &__inner
+    position: relative
+
+  &__title
+    margin-bottom: 60px
+
+  &__caption
+    max-width: 940px
+
+  &__width
+    max-width: 240px
+    margin: 80px auto 90px
+    line-height: 3
+
+  &__desc
+    color: #000
+    opacity: 0.8
+    max-width: 350px
+    margin: 0 auto
+
+  &__vertical
+    display: inline-block
+    width: 19px
+
+    > a
+      display: inline-block
+      white-space: nowrap
+      transform: rotate(-90deg)
+      transform-origin: 50% 50%
+
+  &__left
+    position: absolute
+    left: 20px
+    top: 50%
+    margin-top: -55px
+    transform: translateY(-50%)
+
+  &__play
+    position: absolute
+    top: -4px
+    right: 0
+    width: calc(100% / 4)
+
+  &__text-right
+    position: absolute
+    right: 42px
+    bottom: 120px
+
+  &__meta
+    position: absolute
+
+    &_top
+      top: $on-padding
+      left: $on-padding
+
+    &_bottom
+      bottom: 100px
+      right: 100px
+
+  &__item
+    position: relative
+    padding: $on-padding
+
+    &.bg-light-blue
+      .h2
+        color: $black
+
+      #{$this}__meta a
+        color: rgba($black, .4)
+
+    &.bg-green
+      .h2
+        color: #fff
+
+      #{$this}__meta
+        color: rgba(#fff, 0.6)
+
+  &_row
+    display: flex
+    flex-flow: row nowrap
+    padding: 0
+
+    #{$this}__item
+      display: flex
+      flex-flow: row nowrap
+      align-items: center
+      justify-content: center
+      max-width: 50%
+      flex-basis: 50%
+      height: 450px
+
+  &_md
+    padding-bottom: 150px
+    overflow: hidden
+
+  &_sm
+    padding: 40px 0
+
+.bg-gray
+  background: $gray
+
+.bg-green
+  background: $green
+
+.bg-red
+  background: $red
+
+.bg-light-blue
+  background: $light-blue

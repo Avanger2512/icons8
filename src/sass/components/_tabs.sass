@@ -1,0 +1,42 @@
+.tabs
+  &__caption
+    margin-bottom: 75px
+
+  &__button
+    line-height: 1
+    border-bottom: 2px solid transparent
+    color: #fff
+    +arial-b
+    +tr(opacity .3s)
+
+    &:after
+      content: ''
+      font-size: 26px
+      line-height: 1.2
+      text-transform: uppercase
+      +arial-b
+
+    &:hover
+      opacity: 0.8
+      cursor: pointer
+
+    &.is-active
+      border-color: #f7f5f5
+
+    &:first-child
+      text-align: right
+      padding: 0 20px 17px 110px
+
+      &::after
+        content: 'problem'
+
+    &:last-child
+      text-align: left
+      padding: 0 110px 17px 20px
+
+      &::after
+        content: 'solution'
+
+  &__title
+    text-align: center
+    margin-bottom: 80px

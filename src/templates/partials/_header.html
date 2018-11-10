@@ -1,1 +1,53 @@
-<p>Hello from partials/_header.html</p>
+{% set headerLinks = [
+  {
+    data: ['Products', 'To work together.']
+  },
+  {
+    data: ['Downloads', 'Buy']
+  }
+]%}
+
+{% set headerLinksRight = [
+  {
+    data: ['Ru', 'My Account']
+  }
+]%}
+
+<header class="header">
+  <a href="/" class="logo header__logo">
+    <img class="logo__pic" src="./img/logo.svg" alt="">
+  </a>
+
+  <div class="container">
+    <div class="l">
+      {% for link in headerLinks %}
+      <div class="l__col {% if loop.last %} l__col_gap-md {% endif %}">
+      {% for item in link.data %}
+          <a href="#"
+          class="header__link {% if item == 'To work together.' %} header__link_mod {% endif %}"
+          target="_blank"
+          {% if item == 'Downloads' %} download="filename" {% endif %}>
+          {{ item }}
+          </a>
+      {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="header__right">
+  {% for link in headerLinksRight %}
+    {% for item in link.data %}
+        <a href="#"
+        class="header__link"
+        target="_blank"
+        {% if item == 'Downloads' %} download="filename" {% endif %}>
+        {{ item }}
+        </a>
+    {% endfor %}
+  {% endfor %}
+  </div>
+
+
+
+</header>

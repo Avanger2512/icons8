@@ -1,0 +1,127 @@
+.list
+  $this: &
+
+  &__title
+    font-size: 14px
+    color: #fff
+    text-transform: uppercase
+    margin-bottom: 20px
+    +arial-b
+
+  &__link
+    display: block
+    color: rgba(#fff, 0.2)
+    font-size: 14px
+    line-height: 2.2
+    +arial-b
+    +tr(opacity 0.15)
+
+    &:hover
+      opacity: 0.8
+
+  &__item
+    line-height: 2.2
+    +arial
+
+  &_md
+    #{$this}__link
+      line-height: 2.8
+
+  &_row
+    #{$this}__item
+      display: inline-block
+      vertical-align: middle
+
+      &:not(:last-child)
+        margin-right: 15px
+
+  &_title
+    #{$this}__title
+      margin-bottom: 20px
+      min-height: 30px
+
+  &_dark
+    #{$this}__title
+      color: #000
+
+    #{$this}__item
+      color: #000
+      opacity: 0.4
+
+  &_light
+    #{$this}__title
+      margin-bottom: 35px
+      line-height: 1.4
+
+    #{$this}__item
+      color: rgba(#fff, 0.6)
+      +arial
+
+.application
+  font-size: 0
+
+  &__item
+    display: inline-block
+    overflow: hidden
+    border-radius: 5px
+    +tr(opacity 0.15)
+
+    &:hover
+      opacity: 0.8
+
+    &:not(:last-child)
+      margin-right: 20px
+
+
+.copyright
+  color: rgba(#999, 0.4)
+  line-height: 2.2
+
+.socials-wrap
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+
+  &__title
+    flex: 1 0 auto
+    color: rgba(#999, 0.4)
+    line-height: 2.2
+    margin-right: 20px
+
+.socials
+  flex: 1 0 auto
+  font-size: 0
+  margin: 0 -9px
+  white-space: nowrap
+
+  &__item
+    display: inline-block
+    vertical-align: middle
+    margin: 0 9px
+
+  &__link
+    display: block
+    height: 100%
+
+    &:hover
+      .icon
+        fill: rgba(#fff, 0.3)
+
+  .icon
+    fill: rgba(#fff, 0.2)
+    font-size: 14px
+    max-height: 13px
+    max-width: 21px
+
+
+.desc
+  color: #000
+  font-size: 14px
+  line-height: 2.1
+  padding-top: 50px
+
+  &_white
+    color: #fff
+
+  &_top
+    padding-top: 0

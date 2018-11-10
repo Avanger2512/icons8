@@ -1,0 +1,30 @@
+$header-padding: 20px
+
+.header
+  position: relative
+  padding: $header-padding
+  background: $gray
+
+  &__logo
+    position: absolute
+    left: $header-padding
+    top: calc(#{$header-padding} + 3px)
+
+  &__right
+    position: absolute
+    right: $header-padding
+    top: $header-padding
+
+  &__link
+    color: $black
+    font-size: 14px
+    +tr(opacity .15s)
+
+    &:not(:last-child)
+      margin-right: 55px
+
+    &:hover
+      opacity: 0.4
+
+  &__link_mod
+    color: rgba($black, 0.4)

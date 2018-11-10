@@ -1,0 +1,131 @@
+<footer class="footer">
+
+  {% set footerRowFirst = [
+    {
+      title: 'icons8',
+      links: ['Business Model', 'Team', 'Blog']
+    },
+    {
+      title: 'support',
+      links: ['Forum', 'FAQ', 'Contact us']
+    },
+    {
+      title: 'ideas',
+      links: ['Lunacy Features', 'Photos', 'Icons']
+    }
+  ]%}
+
+  {% set footerRowSecond = [
+    {
+      title: 'products',
+      links: ['Icons8 App', 'Moose', 'Lunacy', 'Sketch the Ripper', 'Music', 'Sounds']
+    },
+    {
+      title: 'API',
+      links: ['Icons', 'Free Photos', 'Music']
+    },
+    {
+      title: 'labs',
+      links: ['Omg-Img', 'iMessage Stickers', 'Line Awesome', 'Cosmic Pedro', 'Scribble AI', 'Pharm', 'We Love SVG']
+    },
+    {
+      title: 'downloads',
+      links: ['Icons8 for Mac and Windows', 'Free photos']
+    }
+  ]%}
+
+
+  <div class="container">
+    <!-- BEGIN row -->
+    <div class="footer__row l">
+      {% for el in footerRowFirst %}
+      <div class="l__col">
+        <ul class="list">
+          <li class="list__title">{{ el.title }}</li>
+          {% for link in el.links %}
+          <li class="list__item">
+            <a href="#" target="_blank" class="list__link">{{ link }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+      <div class="l__col l__col_center">
+        <div class="application">
+          <a href="#" target="_blank" class="application__item" target="_blank">
+            <img src="../img/appstore.jpg" alt="">
+          </a>
+          <a href="#" target="_blank" class="application__item" target="_blank">
+            <img src="../img/googleplay.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- END row -->
+
+    <hr></hr>
+
+    <!-- BEGIN row -->
+    <div class="footer__row l">
+      {% for el in footerRowSecond %}
+      <div class="l__col">
+        <ul class="list list_md">
+          <li class="list__title">{{ el.title }}</li>
+          {% for link in el.links %}
+          <li class="list__item">
+            <a href="#" target="_blank" class="list__link">
+              {{ link }}
+              {% if link == 'Icons8 App' %}
+              <span class="label">new</span>
+              {% endif %}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- END row -->
+
+    <!-- BEGIN row -->
+    <div class="footer__row footer__row_mod l">
+
+      <div class="l__col">
+        <div class="copyright">© 2018 Icons8 LLC.</div>
+      </div>
+
+      <div class="l__col">
+        <ul class="list list_row">
+          <li class="list__item">
+            <a href="#" target="_blank" class="list__link">Privacy Policy</a>
+          </li>
+          <li class="list__item">
+            <a href="#" target="_blank" class="list__link">Terms and Conditions</a>
+          </li>
+        </ul>
+      </div>
+      <!-- <div class="l__col"></div> -->
+
+      <div class="l__col l__col_gap">
+        <div class="socials-wrap">
+          <div class="socials-wrap__title">Follow us</div>
+          {% set soc = ['fb', 'instagram', 'twitter', 'dribbble', 'medium', 'g+']%}
+          <ul class="socials">
+            {% for item in soc %}
+            <li class="socials__item">
+              <a href="#" target="_blank" class="socials__link">
+                {{mixins.icon(item)}}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <!-- END row -->
+
+
+  </div>
+
+</footer>
