@@ -5,15 +5,30 @@ $header-padding: 20px
   padding: $header-padding
   background: $gray
 
+  +sm
+    padding: 10px 20px
+    +clr
+
   &__logo
     position: absolute
     left: $header-padding
     top: calc(#{$header-padding} + 3px)
 
+    +r(1300)
+      position: static
+
   &__right
     position: absolute
     right: $header-padding
     top: $header-padding
+
+    +r(1300)
+      position: static
+      float: right
+      padding: 10px 0
+
+    +sm
+      padding: 5px 0
 
   &__link
     color: $black
@@ -23,8 +38,39 @@ $header-padding: 20px
     &:not(:last-child)
       margin-right: 55px
 
+      +sm
+        margin-right: 15px
+
     &:hover
       opacity: 0.4
 
+    +sm
+      font-size: 10px
+
   &__link_mod
     color: rgba($black, 0.4)
+
+  .container
+    +r(1300)
+      max-width: 100%
+      padding: 0
+      margin-top: 5px
+
+    +sm
+      margin-top: 0
+
+  .l
+    +r(1300)
+      width: 100%
+      justify-content: space-between
+
+  .l__col
+    &:last-child
+      +r(1300)
+        text-align: right
+        margin-left: 0
+
+    +r(1300)
+      max-width: 50%
+      flex-basis: 50%
+      margin-bottom: 0

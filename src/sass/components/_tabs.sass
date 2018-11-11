@@ -16,6 +16,9 @@
       text-transform: uppercase
       +arial-b
 
+      +sm
+        font-size: 18px
+
     &:hover
       opacity: 0.8
       cursor: pointer
@@ -30,12 +33,18 @@
       &::after
         content: 'problem'
 
+      +sm
+        padding: 0 20px 5px 20px
+
     &:last-child
       text-align: left
       padding: 0 110px 17px 20px
 
       &::after
         content: 'solution'
+
+      +sm
+        padding: 0 20px 5px 20px
 
   &__title
     text-align: center

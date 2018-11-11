@@ -18,6 +18,19 @@
     <img class="logo__pic" src="./img/logo.svg" alt="">
   </a>
 
+  <div class="header__right">
+  {% for link in headerLinksRight %}
+    {% for item in link.data %}
+        <a href="#"
+        class="header__link"
+        target="_blank"
+        {% if item == 'Downloads' %} download="filename" {% endif %}>
+        {{ item }}
+        </a>
+    {% endfor %}
+  {% endfor %}
+  </div>
+
   <div class="container">
     <div class="l">
       {% for link in headerLinks %}
@@ -34,20 +47,5 @@
       {% endfor %}
     </div>
   </div>
-
-  <div class="header__right">
-  {% for link in headerLinksRight %}
-    {% for item in link.data %}
-        <a href="#"
-        class="header__link"
-        target="_blank"
-        {% if item == 'Downloads' %} download="filename" {% endif %}>
-        {{ item }}
-        </a>
-    {% endfor %}
-  {% endfor %}
-  </div>
-
-
 
 </header>

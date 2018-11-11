@@ -71,7 +71,18 @@
 
     &:not(:last-child)
       margin-right: 20px
+      +r(1200)
+        margin-right: 10px
 
+    +md
+      border-radius: 3px
+
+    img
+      +r(1200)
+        max-height: 30px
+
+      +md
+        max-height: 20px
 
 .copyright
   color: rgba(#999, 0.4)
@@ -88,16 +99,29 @@
     line-height: 2.2
     margin-right: 20px
 
+    +r(1200)
+      display: none
+
 .socials
   flex: 1 0 auto
   font-size: 0
   margin: 0 -9px
   white-space: nowrap
 
+  +md
+    white-space: normal
+    margin: 0 -5px
+
+  +sm
+    margin-left: -10px
+
   &__item
     display: inline-block
     vertical-align: middle
     margin: 0 9px
+
+    +md
+      margin: 0 5px
 
   &__link
     display: block
@@ -112,7 +136,6 @@
     font-size: 14px
     max-height: 13px
     max-width: 21px
-
 
 .desc
   color: #000
